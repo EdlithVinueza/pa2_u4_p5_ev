@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+	<h1>Hola Mundo desde JAVA</h1>
+	
+    <thead>
+		<tr>
+			<th>Cédula</tr>
+			<th>Nombre</tr>
+			<th>Apellido</tr>
+			<th>Género</tr>
+		</tr>
+	</thead>
+<table>
+	<tbody>
+		<tr th:each="persona:${personas}">
+			<td th:text="${persona.cedula}"></td>
+			<td th:text="${persona.nombre}"></td>
+			<td th:text="${persona.apellido}"></td>
+			<td th:text="${persona.genero}"></td>
+		</tr>
+	</tbody>
+
+	</table>
+</body>
+</html>
