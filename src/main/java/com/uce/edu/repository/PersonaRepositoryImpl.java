@@ -33,7 +33,7 @@ public class PersonaRepositoryImpl implements IPersonaRepository{
 	public Persona consultarPorCedula(String cedula) {
 		// TODO Auto-generated method stub
 		TypedQuery<Persona> myQuery = this.entityManager.createQuery("SELECT p FROM Persona p WHERE p.cedula =:cedula", Persona.class);
-		myQuery.setParameter("persona", cedula);
+		myQuery.setParameter("cedula", cedula);
 				
 		return myQuery.getSingleResult();
 	}
